@@ -5,7 +5,8 @@ Template.task_form.events({
     var $name        = $('#name'),
         $description = $('#description');
 
-    Meteor.call('save', {
+    Meteor.call('insert', {
+      user_id     : Meteor.user()._id,
       date        : new Date(),
       name        : $name.val(),
       description : $description.val()
