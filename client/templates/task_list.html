@@ -1,0 +1,31 @@
+<template name="task_list">
+  <section>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{#each list}}
+            <tr>
+              <td>{{format_date}}</td>
+              <td>{{name}}</td>
+              <td>{{description}}</td>
+              <td>
+                <a href="#" class="delete_task">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </a>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</template>
